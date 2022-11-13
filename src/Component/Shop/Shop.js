@@ -19,6 +19,11 @@ const Shop = () => {
       }
     }
   };
+
+  const HandleRandomLaptop=()=>{
+    const randomOneLaptop = allCartLaptop[Math.floor(Math.random()*allCartLaptop.length)]
+    setAllCartLaptop([randomOneLaptop])
+  }
   return (
     <div className="shop-container">
       <div className="allLaptop">
@@ -35,7 +40,7 @@ const Shop = () => {
         {allCartLaptop.map((cartLaptop) => (
           <CartItem cartLaptop={cartLaptop} key={cartLaptop._id}></CartItem>
         ))}
-        <button className="shop-choose-btn">
+        <button className="shop-choose-btn" onClick={HandleRandomLaptop}>
           <strong>Choose 1 for Me</strong>
         </button>
         <button className="shop-remove-btn">
