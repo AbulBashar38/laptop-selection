@@ -1,0 +1,11 @@
+.cart-item img{
+    height: 50px;
+}
+.cart-item{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    text-align: center;
+}
+.cart-icon{
+    font-size: 30px;
+}

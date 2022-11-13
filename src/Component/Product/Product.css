@@ -5,6 +5,7 @@
 .product-container {
   border: 1px solid gray;
   position: relative;
+  border-radius: 10px;
 }
 .product-info {
   padding: 0px 20px;

@@ -14,7 +14,7 @@ const Product = (props) => {
                     <li>Display: {about.display}</li>
                 </ul>
             </div>
-            <button className='cart-btn'>Add to cart <BsFillCartPlusFill /></button>
+            <button className='cart-btn' onClick={()=>{props.handleAddToCart(props.laptop)}}>Add to cart <BsFillCartPlusFill /></button>
         </div>
     );
 };
