@@ -1,5 +1,6 @@
 import React from 'react';
 import './Product.css'
+import { BsFillCartPlusFill } from 'react-icons/bs';
 const Product = (props) => {
     const {_id,name,company,about,picture}=props.laptop
     return (
@@ -13,7 +14,7 @@ const Product = (props) => {
                     <li>Display: {about.display}</li>
                 </ul>
             </div>
-            <button className='cart-btn'>Add to cart</button>
+            <button className='cart-btn'>Add to cart <BsFillCartPlusFill /></button>
         </div>
     );
 };
