@@ -20,10 +20,17 @@ const Shop = () => {
     }
   };
 
-  const HandleRandomLaptop=()=>{
-    const randomOneLaptop = allCartLaptop[Math.floor(Math.random()*allCartLaptop.length)]
-    setAllCartLaptop([randomOneLaptop])
-  }
+  const HandleRandomLaptop = () => {
+    if (allCartLaptop.length > 0) {
+      const randomOneLaptop =
+        allCartLaptop[Math.floor(Math.random() * allCartLaptop.length)];
+      setAllCartLaptop([randomOneLaptop]);
+    }
+  };
+
+  const removeCart = () => {
+    setAllCartLaptop([]);
+  };
   return (
     <div className="shop-container">
       <div className="allLaptop">
@@ -43,7 +50,7 @@ const Shop = () => {
         <button className="shop-choose-btn" onClick={HandleRandomLaptop}>
           <strong>Choose 1 for Me</strong>
         </button>
-        <button className="shop-remove-btn">
+        <button className="shop-remove-btn" onClick={removeCart}>
           <strong>Remove</strong>
         </button>
       </div>
