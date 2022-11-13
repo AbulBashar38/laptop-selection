@@ -3,6 +3,7 @@ import { AiFillDelete } from 'react-icons/ai';
 import './CartItem.css'
 const CartItem = (props) => {
     const {name,picture}=props.cartLaptop
+    const deleteItem = props.handleOneItemDelete
     return (
         <div className='cart-item'>
             <div>
@@ -11,8 +12,8 @@ const CartItem = (props) => {
             <div>
                 <h5>{name}</h5>
             </div>
-            <div className='cart-icon'>
-                <AiFillDelete />
+            <div >
+                <button className='cart-icon'onClick={()=>deleteItem(props.cartLaptop)}><AiFillDelete /></button>
             </div>
         </div>
     );

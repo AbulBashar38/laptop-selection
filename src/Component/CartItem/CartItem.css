@@ -8,4 +8,10 @@
 }
 .cart-icon{
     font-size: 30px;
+    border: 0ch;
+    background-color: rgb(255, 221, 157);
+    border-radius: 10px;
+}
+.cart-icon:hover{
+    color: red;
 }

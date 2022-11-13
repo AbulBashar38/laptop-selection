@@ -31,6 +31,11 @@ const Shop = () => {
   const removeCart = () => {
     setAllCartLaptop([]);
   };
+
+  const handleOneItemDelete=(deleteItem)=>{
+    const CartItemDelete= allCartLaptop.filter(laptop=>laptop._id !== deleteItem._id)
+    setAllCartLaptop(CartItemDelete);
+  }
   return (
     <div className="shop-container">
       <div className="allLaptop">
@@ -45,7 +50,7 @@ const Shop = () => {
       <div className="cartContainer">
         <h4>Selected Laptops</h4>
         {allCartLaptop.map((cartLaptop) => (
-          <CartItem cartLaptop={cartLaptop} key={cartLaptop._id}></CartItem>
+          <CartItem cartLaptop={cartLaptop} key={cartLaptop._id}handleOneItemDelete={handleOneItemDelete}></CartItem>
         ))}
         <button className="shop-choose-btn" onClick={HandleRandomLaptop}>
           <strong>Choose 1 for Me</strong>
