@@ -1,12 +1,20 @@
-import React from 'react';
-import './Header.css'
+import React from "react";
+import "./Header.css";
+import { Link } from "react-router-dom";
 const Header = () => {
-    return (
-        <div className='header-container'>
-            <h1>Don't Confused</h1>
-            <h3>Choose 4 Laptop</h3>
-        </div>
-    );
+  return (
+    <div className="text-center mb-4">
+      <h1>Buy Your Laptop</h1>
+      <nav>
+        <Link className="text-decoration-none text-dark me-3" to="/">
+          Home
+        </Link>
+        <Link className="text-decoration-none text-dark" to="/review">
+          Order Review
+        </Link>
+      </nav>
+    </div>
+  );
 };
 
 export default Header;
